@@ -1,4 +1,4 @@
-# 🌦️ Weather Web Server
+# 🌦️ Weather Web-Server
 
 A dynamic web server application built with **Node.js** and **Express.js** that provides real-time weather forecasts. This application fetches weather data from the **Weatherstack API** and geolocation information from the **Mapbox API** to deliver accurate weather information for any specified location.
 
