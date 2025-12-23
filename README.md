@@ -13,10 +13,6 @@
   <img alt="Language" src="https://img.shields.io/badge/Language-JavaScript-yellow" />
 </p>
 
-<p align="center">
-  <img src="public/img/weather.png" alt="Weather Icon" width="120" />
-</p>
-
 ---
 
 ## 📚 Table of Contents
@@ -194,5 +190,3 @@ Contributions are welcome!
 
 **Pedram Mirkarimi**
 GitHub: [https://github.com/Pedram-Mirkarimi](https://github.com/Pedram-Mirkarimi)
-
----
