@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌤️ Weather Web Server
+# 🌤️ WeatherNow — Weather Forecast Web App
 
 A dynamic **weather website** built with **Node.js**, **Express**, and **Handlebars (hbs)**.  
 It uses **Mapbox Geocoding** to convert an address to coordinates, then fetches weather data from **OpenWeatherMap**.
