@@ -65,7 +65,7 @@ It uses **Mapbox Geocoding** to convert an address to coordinates, then fetches 
 ## 📁 Project Structure
 
 ```txt
-Web-Server-main/
+weathernow-web/
 ├─ src/
 │  ├─ app.js
 │  └─ utils/
