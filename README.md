@@ -1,165 +1,54 @@
-<div align="center">
+# WeatherNow Web (Learning Project)
 
-# 🌤️ WeatherNow — Weather Forecast Web App
+A small learning project for my **FIAE Ausbildung application (start: 08/2026)**.  
+Users enter an address, the server converts it to coordinates (Mapbox), then fetches the weather data (OpenWeather).
 
-A dynamic **weather website** built with **Node.js**, **Express**, and **Handlebars (hbs)**.  
-It uses **Mapbox Geocoding** to convert an address to coordinates, then fetches weather data from **OpenWeatherMap**.
+## Features
+- Address → coordinates (Mapbox Geocoding)
+- Weather lookup (OpenWeather)
+- Server-rendered pages with Handlebars (hbs)
+- Simple client-side request to `GET /weather?address=...`
+- Basic input validation and error handling
 
-<br/>
+## Tech Used
+- Node.js, Express
+- Handlebars (hbs)
+- Mapbox API, OpenWeather API
+- HTML/CSS/JavaScript (static files)
 
-![Node.js](https://img.shields.io/badge/Node.js-Backend-339933?logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/Express-Web%20Server-000000?logo=express&logoColor=white)
-![Handlebars](https://img.shields.io/badge/Handlebars-hbs-orange)
-![Mapbox](https://img.shields.io/badge/Mapbox-Geocoding-1A1A1A?logo=mapbox&logoColor=white)
-![OpenWeather](https://img.shields.io/badge/OpenWeatherMap-Weather-FF7A00)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=000)
-
-</div>
-
----
-
-## 📌 Table of Contents
-- [✨ Features](#-features)
-- [🧰 Tech Stack](#-tech-stack)
-- [🧩 How It Works](#-how-it-works)
-- [📁 Project Structure](#-project-structure)
-- [🚀 Getting Started](#-getting-started)
-- [🔑 API Keys](#-api-keys)
-- [📡 Endpoints](#-endpoints)
-- [🛣️ Roadmap](#️-roadmap)
-- [👤 Author](#-author)
-
----
-
-## ✨ Features
-- 🧭 Address → coordinates via **Mapbox**
-- 🌦️ Weather data via **OpenWeatherMap**
-- 🧩 Pages rendered with **hbs** templates (layouts/partials)
-- 🧼 Simple frontend with client-side fetch to `/weather`
-- 🧯 Helpful error messages for invalid requests
-
----
-
-## 🧰 Tech Stack
-
-| Category | Technology |
-|---|---|
-| Backend | Node.js, Express |
-| Templates | hbs (Handlebars) |
-| HTTP Client | request |
-| Geocoding | Mapbox API |
-| Weather | OpenWeatherMap API |
-| Frontend | HTML/CSS/JS (static in `public/`) |
-
----
-
-## 🧩 How It Works
-1. User enters an address in the UI.
-2. Browser calls: `GET /weather?address=...`
-3. Server calls Mapbox to get `{ latitude, longitude, location }`
-4. Server calls OpenWeatherMap with coordinates
-5. Server returns `{ forecast, location, address }` to the browser
-
----
-
-## 📁 Project Structure
-
-```txt
-weathernow-web/
-├─ src/
-│  ├─ app.js
-│  └─ utils/
-│     ├─ geocode.js
-│     └─ forecast.js
-├─ public/
-│  ├─ css/
-│  └─ js/
-│     └─ app.js
-├─ templates/
-│  ├─ partials/
-│  └─ views/
-│     ├─ index.hbs
-│     ├─ about.hbs
-│     ├─ help.hbs
-│     └─ 404.hbs
-└─ package.json
-````
-
----
-
-## 🚀 Getting Started
-
-### ✅ Prerequisites
-
-* Node.js installed
-
-### 📥 Install
-
+## Getting Started (Local)
+### 1) Install
 ```bash
 npm install
-```
+````
 
-### ▶️ Run
+### 2) Environment Variables
+
+Create a `.env` file in the project root (see `.env.example`):
+
+* `PORT=3000`
+* `MAPBOX_TOKEN=...`
+* `OPENWEATHER_KEY=...`
+
+### 3) Run
 
 ```bash
 npm start
 ```
 
-Server default:
+Open:
 
-* `http://localhost:3000`
+* [http://localhost:3000](http://localhost:3000)
 
----
+## API
 
-## 🔑 API Keys
-
-This project currently contains API keys directly inside:
-
-* `src/utils/geocode.js` (Mapbox)
-* `src/utils/forecast.js` (OpenWeatherMap)
-
-✅ **Portfolio upgrade (recommended):** move keys to environment variables using `.env`.
-
-Example `.env`:
-
-```env
-PORT=3000
-MAPBOX_TOKEN=your_mapbox_token
-OPENWEATHER_KEY=your_openweather_key
-```
-
----
-
-## 📡 Endpoints
-
-| Method | Route                  | Description           |
-| -----: | ---------------------- | --------------------- |
-|    GET | `/`                    | Weather page          |
-|    GET | `/about`               | About page            |
-|    GET | `/help`                | Help page             |
-|    GET | `/weather?address=...` | Returns JSON forecast |
-|    GET | `/help/*`              | Help 404              |
-|    GET | `*`                    | Global 404            |
-
-**Example:**
+Example:
 
 ```bash
 curl "http://localhost:3000/weather?address=Berlin"
 ```
 
----
+## Notes
 
-## 🛣️ Roadmap
-
-* [ ] Move API keys to `.env` (dotenv)
-* [ ] Replace deprecated `request` with `node-fetch` or `axios`
-* [ ] Add loading state & better UI feedback
-* [ ] Add caching for repeated searches
-* [ ] Deploy (Render/Railway) and add live demo link
-
----
-
-## 👤 Author
-
-**Pedram Mirkarimi**
-GitHub: [https://github.com/Pedram-Mirkarimi](https://github.com/Pedram-Mirkarimi)
+This repository is a **learning/practice project** (Lern-/Übungsprojekt).
+Feedback is welcome.
