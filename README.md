@@ -1,6 +1,6 @@
 # WeatherNow Web (Learning Project)
 
-A small learning project for my **FIAE Ausbildung application (start: 08/2026)**.  
+A small learning project for my **FIAE Ausbildung application (start: ab 08/2026)**.  
 Users enter an address, the server converts it to coordinates (Mapbox), then fetches the weather data (OpenWeather).
 
 ## Features
@@ -20,7 +20,7 @@ Users enter an address, the server converts it to coordinates (Mapbox), then fet
 ### 1) Install
 ```bash
 npm install
-````
+```
 
 ### 2) Environment Variables
 
@@ -51,4 +51,3 @@ curl "http://localhost:3000/weather?address=Berlin"
 ## Notes
 
 This repository is a **learning/practice project** (Lern-/Übungsprojekt).
-Feedback is welcome.
