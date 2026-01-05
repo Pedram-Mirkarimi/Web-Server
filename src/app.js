@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
 
+require('dotenv').config();
 const port = process.env.PORT || 3000;
 
 const geocode = require('./utils/geocode');
@@ -88,3 +89,4 @@ app.get('*', (req, res) => {
 app.listen(port, () => {
   console.log('Server is up on port ' + port);
 });
+
